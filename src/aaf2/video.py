@@ -91,6 +91,7 @@ dnx_profiles = {
 'dnxhr_sq'             : { "size" : None,         'interlaced' : False, "bitrate" : None, "pix_fmt" : "yuv422p",   "frame_rate" : None, "video_profile": "dnxhr_sq", },
 'dnxhr_hq'             : { "size" : None,         'interlaced' : False, "bitrate" : None, "pix_fmt" : "yuv422p",   "frame_rate" : None, "video_profile": "dnxhr_hq", },
 'dnxhr_hqx'            : { "size" : None,         'interlaced' : False, "bitrate" : None, "pix_fmt" : "yuv422p",   "frame_rate" : None, "video_profile": "dnxhr_hqx",},
+'xdcam_hd_50'          : {"size"  : (1920,1080),  'interlaced' : True, "bitrate" : 50, "pix_fmt" : "yuv422p",   "frame_rate" : 25/1, "video_profile": "xdcam_hd_50",},
 }
 
 dnxhd_frame_sizes = {

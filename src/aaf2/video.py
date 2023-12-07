@@ -181,7 +181,6 @@ def dnx_frame_size(cid, width=None, height=None):
 
 
 def valid_dnx_prefix(prefix):
-    print(prefix)
     # DNxHD prefix
     dnxhd_header_prefix = ['0x000002800100', '0x000000146600']
     if prefix in dnxhd_header_prefix:
@@ -201,8 +200,8 @@ def read_dnx_frame_header(dnx_header):
         raise ValueError("Invalid DNxHD frame: header to Short")
 
     prefix = int_from_bytes(bytearray(dnx_header[:6]), byte_order='big') & 0xffffffffff00
-    if not valid_dnx_prefix(prefix):
-        raise ValueError("Invalid DNxHD frame: unknown prefix: 0x%012X" % prefix)
+    #if not valid_dnx_prefix(prefix):
+    #    raise ValueError("Invalid DNxHD frame: unknown prefix: 0x%012X" % prefix)
 
     #NOTE Stored height then width...
     height, width = unpack(b">24xhh", dnx_header[:28])

@@ -181,7 +181,7 @@ def dnx_frame_size(cid, width=None, height=None):
 
 
 def valid_dnx_prefix(prefix):
-
+    print(prefix)
     # DNxHD prefix
     dnxhd_header_prefix = ['0x000002800100', '0x000000146600']
     if prefix in dnxhd_header_prefix:
